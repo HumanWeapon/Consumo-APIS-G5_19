@@ -36,7 +36,6 @@
                                 </tr>
                             </thead>
                             <tbody id="DatosBancos">
-                                
                             </tbody>
                         </table>
                     </div>
@@ -44,8 +43,39 @@
             </div>
         </div>
     </div>
-    <div id="Form">
-
+    <div id="Formulario" class="formulario mt6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Agregar Alumno</h3>
+                </div>
+            </div>
+            <div class="col-12">
+                <form action="" id="MiFormulario" class="Banco">
+                    <label for="">Codigo Banco</label>
+                    <input type="text" id="No_Banco" class="form-control" placeholder="Ingrese el código del banco">
+                    <label for="">Nombre</label>
+                    <input type="text" id="Nombre" class="form-control" placeholder="Ingrese el nombre del banco">
+                    <label for="">Oficina Principal</label>
+                    <input type="text" id="OfPrincipal" class="form-control" placeholder="Ingrese la oficina principal">
+                    <label for="">Cantidad de Sucursales</label>
+                    <input type="text" id="CantSucursales" class="form-control" placeholder="Ingrese la cantidad de sucursales">
+                    <label for="">Fecha de Fundación</label>
+                    <input type="date" id="Fech_Fundacion" class="form-control"">
+                    <label for="">País</label>
+                    <input type="text" id="Pais" class="form-control" placeholder="Ingrese el pais">
+                    <label for="">RTN</label>
+                    <input type="text" id="RTN" class="form-control" placeholder="Ingrese el RTN">
+                    <hr>
+                    <div>
+                        <input type="button" value="Agregar Banco" class="btn btn-success" id="btnAgregar" onclick="AgregarBanco()">
+                    </div>
+                    <hr>
+                </form>
+    
+            </div>
+        </div>
+        
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
