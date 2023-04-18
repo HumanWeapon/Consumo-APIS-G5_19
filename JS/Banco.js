@@ -1,30 +1,30 @@
-var urlApiGetAll = "http://localhost:5005/banco/getall";
+var UrlApiGetAll = 'http://localhost:5005/banco/getall';
 
-$(document).ready(function(){
+$(document).ready( function(){
     CargarBancos();
 });
 
 function CargarBancos(){
     $.ajax({
-        url: urlApiGetAll,
+        url: UrlApiGetAll,
         type: 'GET',
         datatype: 'JSON',
-        success: function(Response){
-            var MissItems = Response;
-            var Valores = '';
+        success: function(response){
+            var MissItems = response;
+            var Valores = '';;
             for(i=0; i<MissItems.length; i++){
                 Valores +=
                 '<tr>'+
-                    '<td>'+MissItems[i].Cod_Banco+'</td>'+
-                    '<td>'+MissItems[i].Nombre+'</td>'+
-                    '<td>'+MissItems[i].OF_Principal+'</td>'+
-                    '<td>'+MissItems[i].Cant_Sucursales+'</td>'+
-                    '<td>'+MissItems[i].Fch_Fundacion+'</td>'+
-                    '<td>'+MissItems[i].Pais+'</td>'+
-                    '<td>'+MissItems[i].RTN+'</td>'+
+                    '<td>' + MissItems[i].od_banco + '</td>' +
+                    '<td>' + MissItems[i].nombre + '</td>' +
+                    '<td>' + MissItems[i].of_principal + '</td>' +
+                    '<td>' + MissItems[i].cant_sucursales + '</td>' +
+                    '<td>' + MissItems[i].fch_fundacion + '</td>' +
+                    '<td>' + MissItems[i].pais + '</td>' +
+                    '<td>' + MissItems[i].rtn + '</td>' +
                 '</tr>';
-                $('DatosBancos').html(Valores);
+                $('#DatosBancos').html(Valores);
             }
         } 
-    })
+    });
 }
