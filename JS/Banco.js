@@ -1,6 +1,7 @@
 var UrlApiGetAll = 'http://localhost:5005/banco/getall';
 var UrlApiInsert = 'http://localhost:5005/banco/insertar';
 var UrlApiGetOne = 'http://localhost:5005/banco/getone/:cod_banco';
+var UrlApiDelete = 'http://localhost:5005/banco/eliminar/:cod_banco';
 
 $(document).ready( function(){
     CargarBancos();
@@ -26,6 +27,9 @@ function CargarBancos(){
                     '<td>' + MissItems[i].rtn + '</td>' +
                     '<td>' +
                         '<button id="btneditar" class="btn btn-dark" onclick="CargarBanco('+ MissItems[i].cod_banco +')">Editar</button>' +
+                    '</td>' +
+                    '<td>' +
+                        '<button id="btneliminar" class="btn btn-danger" onclick="EliminarBanco('+ MissItems[i].cod_banco +')">Eliminar</button>' +
                     '</td>' +
                 '</tr>';
                 $('#DatosBancos').html(Valores);
@@ -95,4 +99,25 @@ function CargarBanco(P_cod_banco){
 }
 function ActualizarBanco(P_cod_banco){
 
+}
+function EliminarBanco(P_cod_banco){
+
+    var DatosBanco = {
+        cod_banco: P_cod_banco,
+    };
+    var datosBancojson = JSON.stringify(DatosBanco);
+    $.ajax({
+        url: UrlApiDelete,
+        type: 'PUT',
+        data: datosBancojson,
+        datatype: 'JSON',
+        contentType: 'application/json',
+        success: function(response){
+            alert('Banco eliminado de forma correcta')
+            $('#MiFormulario').submit();
+        },
+        error: function(textError, errorThrown){
+            alert('Error: '+ textError + errorThrown);
+        }
+    });
 }
