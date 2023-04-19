@@ -18,7 +18,7 @@ function CargarCliente(){
             for(i=0; i<MissItems.length; i++){
                 Valores +=
                 '<tr>'+
-                    '<td>' + MissItems[i].numero_cliente+ '</td>' +
+                    '<td>' + MissItems[i].numero_cliente + '</td>' +
                     '<td>' + MissItems[i].nombres + '</td>' +
                     '<td>' + MissItems[i].apellidos + '</td>' +
                     '<td>' + MissItems[i].rtn + '</td>' +
@@ -57,23 +57,23 @@ function AgregarCliente(){
         contentType: 'application/json',
         success: function(response){
             alert('Cliente ingresado de forma correcta')
-            $('#MiFormulario').submit();
+            $('#FormularioCliente').submit();
         },
         error: function(textError, errorThrown){
             alert('Error: '+ textError + errorThrown);
         }
     });
 }
-function CargarCliente(P_numero_cliente){
+function CargarCliente(p_numero_cliente){
 
     var DatosCliente = {
-        numero_cliente: P_numero_cliente
+        numero_cliente: p_numero_cliente
     };
-    var datosClientejson = JSON.stringify(DatosCliente);
+    var DatosClientejson = JSON.stringify(DatosCliente);
     $.ajax({
         url: UrlApiGetOne,
         type: 'POST',
-        data: datosClientejson,
+        data: DatosClientejson,
         datatype: 'JSON',
         contentType: 'application/json',
         success: function(response){
@@ -97,24 +97,24 @@ function CargarCliente(P_numero_cliente){
         }
     });
 }
-function ActualizarCliente(P_numero_cliente){
+function ActualizarCliente(p_numero_cliente){
 
 }
-function EliminarCliente(P_numero_cliente){
+function EliminarCliente(p_numero_cliente){
 
     var DatosCliente = {
-        numero_cliente: P_numero_cliente,
+        numero_cliente: p_numero_cliente,
     };
-    var datosClientejson = JSON.stringify(DatosCliente);
+    var DatosClientejson = JSON.stringify(DatosCliente);
     $.ajax({
         url: UrlApiDelete,
         type: 'PUT',
-        data: datosClientejson,
+        data: DatosClientejson,
         datatype: 'JSON',
         contentType: 'application/json',
         success: function(response){
             alert('Cliente eliminado de forma correcta')
-            $('#MiFormulario').submit();
+            $('#FormularioCliente').submit();
         },
         error: function(textError, errorThrown){
             alert('Error: '+ textError + errorThrown);
