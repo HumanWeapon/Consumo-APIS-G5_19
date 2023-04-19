@@ -27,7 +27,7 @@
                             <thead>
                                 <tr>
                                     <th>Numero de Cliente </th>
-                                    <th>Nombres/th>
+                                    <th>Nombres</th>
                                     <th>Apellidos</th>
                                     <th>RTN</th>
                                     <th>Fecha de Afiliacion</th>
@@ -35,7 +35,7 @@
                                     <th>Numero de Cuenta</th>
                                 </tr>
                             </thead>
-                            <tbody id="DatosClientes">
+                            <tbody id="DatosCliente">
                             </tbody>
                         </table>
                     </div>
@@ -51,11 +51,11 @@
                 </div>
             </div>
             <div class="col-12">
-                <form action="" id="MiFormulario" class="Cliente">
+                <form action="" id="FormularioCliente" class="Cliente">
                     <label for="">Numero de Cliente</label>
                     <input type="text" id="No_Cliente" class="form-control" placeholder="Ingrese el Numero del Cliente">
                     <label for="">Nombres</label>
-                    <input type="text" id="Nombres" class="form-control" placeholder="Ingrese el nombre del Cliente">
+                    <input type="text" id="Nombres" class="form-control" placeholder="Ingrese el Nombre del Cliente">
                     <label for="">Apellidos</label>
                     <input type="text" id="Apellidos" class="form-control" placeholder="Ingrese el Apellido del Cliente">
                     <label for="">RTN</label>
@@ -63,9 +63,9 @@
                     <label for="">Fecha de Afiliacion</label>
                     <input type="date" id="Fech_Afiliacion" class="form-control">
                     <label for="">Saldo Actual</label>
-                    <input type="number" id="Saldo_Actual" class="form-control" placeholder="Ingrese el Saldo Actual">
+                    <input type="text" id="Saldo_Actual" class="form-control" placeholder="Ingrese el Saldo Actual">
                     <label for="">Numero de Cuenta</label>
-                    <input type="number" id="No_Cuenta" class="form-control" placeholder="Ingrese el Numero de Cuenta">
+                    <input type="text" id="No_Cuenta" class="form-control" placeholder="Ingrese el Numero de Cuenta">
                     <hr>
                     <div>
                         <input type="button" value="Agregar Cliente" class="btn btn-success" id="btnAgregar" onclick="AgregarCliente()">
