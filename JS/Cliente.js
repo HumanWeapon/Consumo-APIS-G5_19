@@ -1,7 +1,7 @@
-var UrlApiGetAll = 'http://localhost:5005/cliente/getall';
-var UrlApiInsert = 'http://localhost:5005/cliente/insertar';
-var UrlApiGetOne = 'http://localhost:5005/cliente/getone/:numero_cliente';
-var UrlApiDelete = 'http://localhost:5005/cliente/eliminar/:numero_cliente';
+var UrlApiGetAll = 'http://localhost:5005/Cliente/getall';
+var UrlApiInsert = 'http://localhost:5005/Cliente/insertar';
+var UrlApiGetOne = 'http://localhost:5005/Cliente/getone/:numero_cliente';
+var UrlApiDelete = 'http://localhost:5005/Cliente/eliminar/:numero_cliente';
 
 $(document).ready( function(){
     CargarCliente();
