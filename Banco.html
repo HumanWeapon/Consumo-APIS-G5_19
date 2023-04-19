@@ -47,9 +47,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Agregar Alumno</h3>
+                    <h3 id="titulo-agregar-actualizar">Agregar Banco</h3>
                 </div>
-            </div>
+            </div>  
             <div class="col-12">
                 <form action="" id="MiFormulario" class="Banco">
                     <label for="">Codigo Banco</label>
@@ -66,13 +66,12 @@
                     <input type="text" id="Pais" class="form-control" placeholder="Ingrese el pais">
                     <label for="">RTN</label>
                     <input type="text" id="RTN" class="form-control" placeholder="Ingrese el RTN">
-                    <hr>
-                    <div>
-                        <input type="button" value="Agregar Banco" class="btn btn-success" id="btnAgregar" onclick="AgregarBanco()">
-                    </div>
-                    <hr>
                 </form>
-    
+                <div id="btnAgregarBanco">
+                    <hr>
+                    <input type="button" value="Agregar Banco" class="btn btn-success" id="btnAgregar" onclick="AgregarBanco()">
+                    <hr>
+                </div>
             </div>
         </div>
         
