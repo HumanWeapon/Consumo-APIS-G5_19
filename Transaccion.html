@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaccion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/Transaccion.js"></script>
+    
+</head>
+<body>
+    <div id="Tabla">
+        <div class="container">
+            <div class="consulta mt6">
+                <div class="row">
+                    <h3>Lista de Transacciones</h3><br><br><br>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="Home.html" class="btn btn-primary" type="button">Regresar al Inicio</a>
+                  </div>
+                <div class="box-body">
+                    <div class="table table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código Transacción</th>
+                                    <th>Tipo Transacción</th>
+                                    <th>Cod. Cliente</th>
+                                    <th>Fecha Transacción</th>
+                                    <th>Monto Transacción</th>
+                                    <th>Sucursal</th>
+                                    <th>Número de Cuenta</th>
+                                </tr>
+                            </thead>
+                            <tbody id="DatosTransaccion">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Formulario" class="formulario mt6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 id="titulo-agregar-actualizar">Agregar Transacción</h3>
+                </div>
+            </div>  
+            <div class="col-12">
+                <form action="" id="MiFormulario" class="Transaccion">
+                    <label for="">Código Transacción</label>
+                    <input type="text" id="Cod_transaccion" class="form-control" placeholder="Ingrese el código de la transacción">
+                    <label for="">Tipo Transacción</label>
+                    <input type="text" id="Tipo_transacción" class="form-control" placeholder="Ingrese el tipo de transacción">
+                    <label for="">Cod. Cliente</label>
+                    <input type="text" id="Cod_cliente" class="form-control" placeholder="Ingrese el código cliente">
+                    <label for="">Fecha Transacción</label>
+                    <input type="date" id="Fech_Afiliacion" class="form-control"">
+                    <label for="">Monto Transacción</label>
+                    <input type="text" id="Monto" class="form-control" placeholder="Ingrese el monto">
+                    <label for="">Sucursal</label>
+                    <input type="text" id="Sucursal" class="form-control" placeholder="Ingrese la sucursal">
+                    <label for="">Número de Cuenta</label>
+                    <input type="text" id="No_Cuenta" class="form-control" placeholder="Ingrese el número de cuenta">
+                </form>
+                <div id="btnAgregarTransaccion">
+                    <hr>
+                    <input type="button" value="Agregar Cliente" class="btn btn-success" id="btnAgregar" onclick="AgregarTransaccion()">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
