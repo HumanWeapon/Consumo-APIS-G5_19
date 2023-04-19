@@ -26,13 +26,13 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Numero de Cliente </th>
+                                    <th>Número Cliente</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
                                     <th>RTN</th>
-                                    <th>Fecha de Afiliacion</th>
+                                    <th>Fecha de Afiliación</th>
                                     <th>Saldo Actual</th>
-                                    <th>Numero de Cuenta</th>
+                                    <th>Número de Cuenta</th>
                                 </tr>
                             </thead>
                             <tbody id="DatosCliente">
@@ -47,32 +47,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Agregar Cliente</h3>
+                    <h3 id="titulo-agregar-actualizar">Agregar Cliente</h3>
                 </div>
-            </div>
+            </div>  
             <div class="col-12">
-                <form action="" id="FormularioCliente" class="Cliente">
-                    <label for="">Numero de Cliente</label>
-                    <input type="text" id="No_Cliente" class="form-control" placeholder="Ingrese el Numero del Cliente">
+                <form action="" id="MiFormulario" class="Cliente">
+                    <label for="">Número Cliente</label>
+                    <input type="text" id="No_Cliente" class="form-control" placeholder="Ingrese el número del cliente">
                     <label for="">Nombres</label>
-                    <input type="text" id="Nombres" class="form-control" placeholder="Ingrese el Nombre del Cliente">
+                    <input type="text" id="Nombre" class="form-control" placeholder="Ingrese los nombres del cliente">
                     <label for="">Apellidos</label>
-                    <input type="text" id="Apellidos" class="form-control" placeholder="Ingrese el Apellido del Cliente">
+                    <input type="text" id="Apellido" class="form-control" placeholder="Ingrese los apellidos del cliente">
                     <label for="">RTN</label>
                     <input type="text" id="RTN" class="form-control" placeholder="Ingrese el RTN">
-                    <label for="">Fecha de Afiliacion</label>
-                    <input type="date" id="Fech_Afiliacion" class="form-control">
+                    <label for="">Fecha de Afiliación</label>
+                    <input type="date" id="Fech_Afiliacion" class="form-control"">
                     <label for="">Saldo Actual</label>
-                    <input type="text" id="Saldo_Actual" class="form-control" placeholder="Ingrese el Saldo Actual">
-                    <label for="">Numero de Cuenta</label>
-                    <input type="text" id="No_Cuenta" class="form-control" placeholder="Ingrese el Numero de Cuenta">
-                    <hr>
-                    <div>
-                        <input type="button" value="Agregar Cliente" class="btn btn-success" id="btnAgregar" onclick="AgregarCliente()">
-                    </div>
-                    <hr>
+                    <input type="text" id="Salfo_Actual" class="form-control" placeholder="Ingrese el saldo actual">
+                    <label for="">Número de Cuenta</label>
+                    <input type="text" id="No_Cuenta" class="form-control" placeholder="Ingrese el número de cuenta">
                 </form>
-    
+                <div id="btnAgregarCliente">
+                    <hr>
+                    <input type="button" value="Agregar Cliente" class="btn btn-success" id="btnAgregar" onclick="AgregarCiente()">
+                    <hr>
+                </div>
             </div>
         </div>
         
